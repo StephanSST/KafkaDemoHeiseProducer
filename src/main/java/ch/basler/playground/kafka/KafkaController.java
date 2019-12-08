@@ -1,6 +1,5 @@
 package ch.basler.playground.kafka;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,12 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/kafka/heise")
 public class KafkaController {
 
-  private final HeiseRssFeedReader heiseRssFeedReader;
-
-  @Autowired
-  KafkaController(HeiseRssFeedReader heiseRssFeedReader) {
-    this.heiseRssFeedReader = heiseRssFeedReader;
-  }
+//  private final HeiseRssFeedReader heiseRssFeedReader;
+//
+//  @Autowired
+//  KafkaController(HeiseRssFeedReader heiseRssFeedReader) {
+//    this.heiseRssFeedReader = heiseRssFeedReader;
+//  }
 
   @RequestMapping("/version")
   public String showVersion() {
@@ -24,7 +23,7 @@ public class KafkaController {
 
   @PostMapping(value = "/publish")
   public void readFromHeiseAndPublishToKafka() {
-    heiseRssFeedReader.readerAndProduce();
+//    heiseRssFeedReader.readerAndProduce();
   }
 
 }
