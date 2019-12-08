@@ -4,8 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import ch.basler.playground.kafka.model.RssFeedEntry;
-
 @Service
 public class KafkaProducer {
 
@@ -15,8 +13,8 @@ public class KafkaProducer {
 //  @Autowired
 //  private KafkaTemplate<String, RssFeedEntry> kafkaTemplate;
 
-  public void sendMessage(RssFeedEntry message) {
-    LOG.info(String.format("#### -> Producing message -> %s", message));
-//    this.kafkaTemplate.send(TOPIC, message);
-  }
+//  public void sendMessage(RssFeedEntry message) {
+//    LOG.info(String.format("#### -> Producing message -> %s", message));
+////    this.kafkaTemplate.send(TOPIC, message);
+//  }
 }
