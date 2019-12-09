@@ -1,7 +1,6 @@
 package ch.basler.playground.kafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,9 +21,14 @@ public class KafkaController {
     return message;
   }
 
-  @PostMapping(value = "/publish")
+  @RequestMapping(value = "/publish")
   public void readFromHeiseAndPublishToKafka() {
     heiseRssFeedReader.readerAndProduce();
   }
 
+//  @PostMapping(value = "/publish")
+//  public void readFromHeiseAndPublishToKafka() {
+//    heiseRssFeedReader.readerAndProduce();
+//  }
+//  
 }
